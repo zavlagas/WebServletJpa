@@ -18,22 +18,22 @@ public class SuperDaoManagerFactory {
     private  EntityManagerFactory emf;
     private  EntityManager em;
 
-    protected void openEntityManagerFactory() {
+    private void openEntityManagerFactory() {
         emf = Persistence.createEntityManagerFactory("salesPU");
     }
 
-    protected void closeEntityManagerFactory() {
+    private void closeEntityManagerFactory() {
 
         emf.close();
     }
 
-    protected EntityManager getEntityManager() {
+    private EntityManager getEntityManager() {
         em = emf.createEntityManager();
 
         return (em);
     }
 
-    protected void closeEntityManager() {
+    private void closeEntityManager() {
         em.close();
     }
 

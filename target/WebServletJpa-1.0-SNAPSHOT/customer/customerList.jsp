@@ -28,7 +28,7 @@
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody> 
                     <c:forEach items="${customers}" var="cu">
                         <tr>
                             <td>${cu.ccode}</td>

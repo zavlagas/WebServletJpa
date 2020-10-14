@@ -6,7 +6,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import zavi.entities.Salesman;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-10-14T15:01:39")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-10-14T16:36:31")
 @StaticMetamodel(Family.class)
 public class Family_ { 
 
