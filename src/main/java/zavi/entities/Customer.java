@@ -27,6 +27,11 @@ public class Customer implements Serializable {
     public Customer() {
     }
 
+    public Customer(String cname) {
+        this.cname = cname;
+    }
+    
+
     public List<Sales> getSales() {
         return sales;
     }

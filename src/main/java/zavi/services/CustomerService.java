@@ -22,4 +22,26 @@ public class CustomerService {
         return (customers);
     }
 
+    public void createCustomer(String name) {
+        Customer c = new Customer(name);
+        cdao.createCustomer(c);
+    }
+
+    public Customer findCustomerBy(String id) {
+        int ccode = Integer.parseInt(id);
+        Customer c = cdao.findCustomerBy(ccode);
+        return (c);
+    }
+
+    public void updateCustomer(String id, String name) {
+        Customer c = findCustomerBy(id);
+        c.setCname(name);
+        cdao.updateCustomer(c);
+    }
+
+    public void deleteCustomerBy(String id) {
+        Customer c = findCustomerBy(id);
+        cdao.deleteCustomer(c);
+    }
+
 }
