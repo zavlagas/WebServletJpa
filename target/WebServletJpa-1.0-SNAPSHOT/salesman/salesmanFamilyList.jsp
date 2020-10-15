@@ -23,6 +23,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Id</th>
                         <th>Name</th>
                         <th>Relationship</th>
                         <th>Birth Date</th>
@@ -34,11 +35,12 @@
                         <tbody>
                             <c:forEach  items="${salesman.getMembers()}" var="m">
                                 <tr>
+                                    <td>${m.fid}</td>
                                     <td>${m.fname}</td>
                                     <td>${m.frelationship}</td>
                                     <td>${m.dob}</td>
-                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?id=${salesman.scode}">Edit</a></td>
-                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?id=${salesman.scode}">Delete</a></td>
+                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?mid=${m.fid}&sid=${salesman.scode}">Edit</a></td>
+                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?mid=${m.fid}&sid=${salesman.scode}">Delete</a></td>
                                 </tr>
                             </c:forEach>
                         </tbody>

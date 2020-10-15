@@ -17,13 +17,15 @@
         <section class="container">
             <h2>Edit Family Member</h2>
             <form class="form" action="${pageContext.request.contextPath}/salesman/editFamilyMember" method="POST" >
-                <input type="hidden" name="id" value="${salesmanId}"/>
+                <input type="hidden" name="sid" value="${salesmanId}"/>
+                <label for="mid">Id</label>
+                <input id="mid" type="number" name="mid" readonly value="${member.fid}"/>
                 <label for="fname">Name</label>
-                <input id="fname" type="text" name="name" value="${family.fname}"/>
+                <input id="fname" type="text" name="name" value="${member.fname}"/>
                 <label for="relation">Relationship</label>
-                <input id="relation" type="text" name="relation" value="${family.frelationship}"/>
+                <input id="relation" type="text" name="relation" value="${member.frelationship}"/>
                 <label for="dob">Date Of Birth</label>
-                <input id="dob" type="date" name="dob" value="${family.dob}"/>
+                <input id="dob" type="date" name="dob" value="${member.dob}"/>
                 <input class="btn" type="submit" value="Submit"/>
             </form>
         </section>

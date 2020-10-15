@@ -11,8 +11,11 @@ C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\entiti
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\ProductService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\log\Error404Servlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\products\ProductEditServlet.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\salesman\SalesmanCreateFamilyMember.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\salesman\SalesmanDeleteFamily.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\salesman\SalesmanEditForm.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\SuperDaoManagerFactory.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\salesman\SalesmanEditFamilyMember.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\products\ProductDeleteServlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\FamilyService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\entities\Family.java

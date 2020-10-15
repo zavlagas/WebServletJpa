@@ -6,8 +6,9 @@
 package zavi.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,7 +27,7 @@ public class Salesman implements Serializable {
     private String sname;
     private String scity;
     private double scomm;
-    @OneToMany(mappedBy = "salesman")//JPA LOOK AT THE FIELD SALESMAN TO FIND OUT HOW TO MAP THE TABLES
+    @OneToMany(mappedBy = "salesman", cascade = {CascadeType.PERSIST, CascadeType.MERGE})//JPA LOOK AT THE FIELD SALESMAN TO FIND OUT HOW TO MAP THE TABLES
     private List<Family> members;
     @OneToMany(mappedBy = "salesman")
     private List<Sales> sales;
@@ -86,6 +87,14 @@ public class Salesman implements Serializable {
 
     public void setMembers(List<Family> members) {
         this.members = members;
+    }
+
+    public void addMember(Family member) {
+        if (members == null) {
+            members = new ArrayList<>();
+        }
+        member.setSalesman(this);
+        members.add(member);
     }
 
     public boolean salesmanHasAFamily() {

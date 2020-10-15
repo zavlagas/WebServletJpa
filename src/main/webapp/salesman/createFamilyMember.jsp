@@ -17,7 +17,7 @@
         <section class="container">
             <h2>Create Salesman</h2>
             <form class="form" action="${pageContext.request.contextPath}/salesman/createSalesmanFamily" method="POST" >
-                <input type="hidden" name="id" value="${salesmanId}"/>
+                <input type="hidden" name="id" value="${salesman.scode}"/>
                 <label for="fname">Enter Name</label>
                 <input id="fname" type="text" name="name"/>
                 <label for="relation">Enter Relationship</label>

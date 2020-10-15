@@ -6,6 +6,7 @@
 package zavi.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -23,12 +24,18 @@ public class Family implements Serializable {
     private int fid;
     private String fname;
     private String frelationship;
-    private LocalDate dob;
+    private Date dob;
     @ManyToOne
     @JoinColumn(name = "salesman")//owing side
     private Salesman salesman;
 
     public Family() {
+    }
+
+    public Family(String fname, String frelationship, Date dob) {
+        this.fname = fname;
+        this.frelationship = frelationship;
+        this.dob = dob;
     }
 
     public int getFid() {
@@ -55,11 +62,11 @@ public class Family implements Serializable {
         this.frelationship = frelationship;
     }
 
-    public LocalDate getDob() {
+    public Date getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob) {
+    public void setDob(Date dob) {
         this.dob = dob;
     }
 
@@ -71,8 +78,4 @@ public class Family implements Serializable {
         this.salesman = salesman;
     }
 
-   
-  
-    
-   
 }

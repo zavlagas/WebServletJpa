@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
+import zavi.entities.Family;
 import zavi.entities.Salesman;
 
 /**
@@ -73,6 +74,41 @@ public class SalesmanDao extends SuperDaoManagerFactory {
         }
 
         return (salesman);
+    }
+
+    public void createSalesmanFamilyMember(Salesman salesman, Family member) {
+        EntityManager em = openConnection();
+        em.getTransaction().begin();
+        Salesman sm = em.merge(salesman);
+        sm.addMember(member);
+        em.getTransaction().commit();
+        closeConnection();
+    }
+
+    public void deleteFamilyMemberBy(int mid) {
+        EntityManager em = openConnection();
+        em.getTransaction().begin();
+        em.remove(em.find(Family.class, mid));
+        em.getTransaction().commit();
+        closeConnection();
+    }
+
+    public Family findFamilyMemberById(int fId) {
+        EntityManager em = openConnection();
+        em.getTransaction().begin();
+        Family member = em.find(Family.class, fId);
+        em.getTransaction().commit();
+        closeConnection();
+        return (member);
+
+    }
+
+    public void updateSalesmanFamilyMember(Family member) {
+        EntityManager em = openConnection();
+        em.getTransaction().begin();
+        em.merge(member);
+        em.getTransaction().commit();
+        closeConnection();
     }
 
 }

@@ -8,7 +8,7 @@ import zavi.entities.Customer;
 import zavi.entities.Product;
 import zavi.entities.Salesman;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-10-15T13:54:15")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-10-15T16:44:28")
 @StaticMetamodel(Sales.class)
 public class Sales_ { 
 
