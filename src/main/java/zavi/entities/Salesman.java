@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import org.hibernate.LazyInitializationException;
 
 @NamedQuery(name = "Salesman.findSalesmanFamilyByScode", query = "SELECT s FROM Salesman s JOIN FETCH s.members m WHERE s.scode=:id")
 @Entity
@@ -88,12 +89,16 @@ public class Salesman implements Serializable {
     }
 
     public boolean salesmanHasAFamily() {
-       
-        if (this.getMembers().size() > 0) {
-            return true;
-        } else {
-            return false;
+        boolean answer = false;
+        try {
+            if (this.getMembers().size() > 0) {
+                answer = true;
+            }
+        } catch (LazyInitializationException ex) {
+            answer = false;
         }
+
+        return (answer);
 
     }
 
