@@ -5,10 +5,17 @@
  */
 package zavi.dao;
 
+import java.util.List;
+import zavi.entities.Salesman;
+
 /**
  *
  * @author User
  */
 public class SalesmanDao extends SuperDaoManagerFactory{
+
+    public List<Salesman> getAllSalesmen() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

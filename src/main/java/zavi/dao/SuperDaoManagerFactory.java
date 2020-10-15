@@ -15,16 +15,16 @@ import javax.persistence.Persistence;
  */
 public class SuperDaoManagerFactory {
 
-    private  EntityManagerFactory emf;
-    private  EntityManager em;
+    protected static EntityManagerFactory emf;
+    private EntityManager em;
 
-    private void openEntityManagerFactory() {
-        emf = Persistence.createEntityManagerFactory("salesPU");
+    protected static void openEntityManagerFactory() {
+        SuperDaoManagerFactory.emf = Persistence.createEntityManagerFactory("salesPU");
     }
 
-    private void closeEntityManagerFactory() {
+    protected static void closeEntityManagerFactory() {
 
-        emf.close();
+        SuperDaoManagerFactory.emf.close();
     }
 
     private EntityManager getEntityManager() {
@@ -38,14 +38,12 @@ public class SuperDaoManagerFactory {
     }
 
     protected EntityManager openConnection() {
-        openEntityManagerFactory();
         EntityManager em1 = getEntityManager();
         return (em1);
     }
 
     protected void closeConnection() {
         em.close();
-        emf.close();
     }
 
 }

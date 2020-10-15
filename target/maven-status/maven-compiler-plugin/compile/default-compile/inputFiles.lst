@@ -1,6 +1,7 @@
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\customers\CustomerCreateServlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\SalesDao.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\entities\Customer.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\ConnectionDao.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\CustomerDao.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\CustomerService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\products\ProductCreateServlet.java
@@ -20,8 +21,10 @@ C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\entiti
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\SalesService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\customers\ListCustomerServlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\log\LogoutServlet.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\salesman\ListSalesmanServlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\FamilyDao.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\dao\ProductDao.java
+C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\ConnectionService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\services\SalesmanService.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\products\ListProductServlet.java
 C:\Users\User\Documents\java\ServletApps\WebServletJpa\src\main\java\zavi\servlets\customers\CustomerEditServlet.java

@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import zavi.services.ConnectionService;
 
 /**
  *
@@ -23,7 +24,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"}, initParams = {
     @WebInitParam(name = "onoma", value = "NotValid")})
 public class LoginServlet extends HttpServlet {
-
+    ConnectionService service = new ConnectionService();
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -33,6 +34,7 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (username.equals("admin") && password.equals("1234")) {
+            service.openManagerFactoryConnection();
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
             path = "/index.jsp";

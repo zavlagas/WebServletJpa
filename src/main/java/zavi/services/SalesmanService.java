@@ -5,7 +5,9 @@
  */
 package zavi.services;
 
+import java.util.List;
 import zavi.dao.SalesmanDao;
+import zavi.entities.Salesman;
 
 /**
  *
@@ -13,5 +15,10 @@ import zavi.dao.SalesmanDao;
  */
 public class SalesmanService {
     SalesmanDao smdao = new SalesmanDao();
+
+    public List<Salesman> getAllSalesmen() {
+        List<Salesman> salesmen = smdao.getAllSalesmen();
+        return(salesmen);
+    }
     
 }
