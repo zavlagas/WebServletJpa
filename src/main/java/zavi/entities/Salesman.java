@@ -87,4 +87,14 @@ public class Salesman implements Serializable {
         this.members = members;
     }
 
+    public boolean salesmanHasAFamily() {
+       
+        if (this.getMembers().size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 }

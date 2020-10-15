@@ -29,21 +29,28 @@
                         <th colspan="2">Action</th>
                     </tr>
                 </thead>
-               
-                    <tbody>
-                         <c:forEach items="${salesman.getMembers()}" var="m">
-                        <tr>
-                            <td>${m.fname}</td>
-                            <td>${m.frelationship}</td>
-                            <td>${m.dob}</td>
-                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?id=${salesman.scode}">Edit</a></td>
-                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?id=${salesman.scode}">Delete</a></td>
-                        </tr>
-                         </c:forEach>
-                    </tbody>
-                    
-                    ${param.message}
-               
+                <c:choose>
+                    <c:when test="${salesman.salesmanHasAFamily()}">
+                        <tbody>
+                            <c:forEach  items="${salesman.getMembers()}" var="m">
+                                <tr>
+                                    <td>${m.fname}</td>
+                                    <td>${m.frelationship}</td>
+                                    <td>${m.dob}</td>
+                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?id=${salesman.scode}">Edit</a></td>
+                                    <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?id=${salesman.scode}">Delete</a></td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </c:when>
+                    <c:otherwise>
+                        </br>
+                    </c:otherwise>
+                </c:choose>
+
+
+                ${param.message}
+
             </table>
         </section>
         <jsp:include page="../footer.jsp"/>

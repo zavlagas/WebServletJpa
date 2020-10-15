@@ -7,6 +7,7 @@ package zavi.dao;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 import zavi.entities.Salesman;
 
@@ -59,11 +60,18 @@ public class SalesmanDao extends SuperDaoManagerFactory {
     }
 
     public Salesman findSalesmanWithFamilyBy(int scode) {
+        Salesman salesman;
         EntityManager em = openConnection();
         TypedQuery<Salesman> query = em.createNamedQuery("Salesman.findSalesmanFamilyByScode", Salesman.class);
         query.setParameter("id", scode);
-        Salesman salesman = query.getSingleResult();
-        closeConnection();
+        try {
+            salesman = query.getSingleResult();
+        } catch (NoResultException nre) {
+            salesman = findSalesmanBy(scode);
+        } finally {
+            closeConnection();
+        }
+
         return (salesman);
     }
 
