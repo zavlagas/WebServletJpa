@@ -31,13 +31,13 @@
                 </thead>
                
                     <tbody>
-                         <c:forEach items="${salesman.getFamily()}" var="f">
+                         <c:forEach items="${salesman.getMembers()}" var="m">
                         <tr>
-                            <td>${f.fname}</td>
-                            <td>${f.frelationship}</td>
-                            <td>${f.dob}</td>
-                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?id=${salesman.scode}&name=${f.fname}&relation=${f.frelationship}&dob=${f.dob}">Edit</a></td>
-                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?id=${salesman.scode}&name=${f.fname}&relation=${f.frelationship}&dob=${f.dob}">Delete</a></td>
+                            <td>${m.fname}</td>
+                            <td>${m.frelationship}</td>
+                            <td>${m.dob}</td>
+                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/editFamilyMember?id=${salesman.scode}">Edit</a></td>
+                            <td class="buttontd"><a class="btn" href="${pageContext.request.contextPath}/salesman/deleteFamilyMember?id=${salesman.scode}">Delete</a></td>
                         </tr>
                          </c:forEach>
                     </tbody>

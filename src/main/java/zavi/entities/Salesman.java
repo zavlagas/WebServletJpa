@@ -12,8 +12,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
+@NamedQuery(name = "Salesman.findSalesmanFamilyByScode", query = "SELECT s FROM Salesman s JOIN FETCH s.members m WHERE s.scode=:id")
 @Entity
 public class Salesman implements Serializable {
 
@@ -29,6 +31,12 @@ public class Salesman implements Serializable {
     private List<Sales> sales;
 
     public Salesman() {
+    }
+
+    public Salesman(String sname, String scity, double scomm) {
+        this.sname = sname;
+        this.scity = scity;
+        this.scomm = scomm;
     }
 
     public List<Sales> getSales() {
@@ -78,12 +86,5 @@ public class Salesman implements Serializable {
     public void setMembers(List<Family> members) {
         this.members = members;
     }
-
-  
-
-    
-
-    
-   
 
 }

@@ -10,10 +10,12 @@ zavi\services\CustomerService.class
 zavi\services\FamilyService.class
 zavi\entities\Family_.class
 zavi\servlets\customers\CustomerDeleteServlet.class
+zavi\servlets\salesman\SalesmanEditForm.class
 zavi\servlets\products\ProductEditServlet.class
 zavi\servlets\customers\CustomerCreateServlet.class
 zavi\services\ConnectionService.class
 zavi\servlets\salesman\ListSalesmanServlet.class
+zavi\servlets\salesman\SalesmanCreateForm.class
 zavi\dao\SalesDao.class
 zavi\dao\CustomerDao.class
 zavi\entities\Salesman_.class
@@ -22,11 +24,13 @@ zavi\dao\SuperDaoManagerFactory.class
 zavi\entities\Customer.class
 zavi\servlets\log\Error404Servlet.class
 zavi\servlets\products\ListProductServlet.class
+zavi\servlets\salesman\ListSalesmanFamilyServlet.class
 zavi\servlets\log\LogoutServlet.class
 zavi\services\SalesmanService.class
 zavi\servlets\products\ProductCreateServlet.class
 zavi\servlets\products\ProductDeleteServlet.class
 zavi\services\ProductService.class
+zavi\servlets\salesman\SalesmanDeleteServlet.class
 zavi\dao\SalesmanDao.class
 zavi\entities\Sales.class
 zavi\entities\Salesman.class
