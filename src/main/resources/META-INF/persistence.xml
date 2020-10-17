@@ -8,7 +8,7 @@
 
         <properties>
 
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sales?serverTimezone=UTC"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sales?serverTimezone=Europe/Athens"/>
 
             <property name="javax.persistence.jdbc.user" value="root"/>
 
